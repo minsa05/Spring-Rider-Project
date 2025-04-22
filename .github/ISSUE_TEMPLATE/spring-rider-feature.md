@@ -1,6 +1,6 @@
 ---
-name: Spring-Rider-Issue
-about: 4인의 용사들의 hot이슈
+name: Spring-Rider-feature
+about: 4인의 용사들의 feature 이슈
 title: "[Feature]"
 labels: Feature
 assignees: ''
