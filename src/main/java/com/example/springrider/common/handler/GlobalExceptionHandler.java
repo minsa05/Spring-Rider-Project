@@ -1,6 +1,7 @@
 package com.example.springrider.common.handler;
 
 import com.example.springrider.common.exception.BaseException;
+import java.time.LocalDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import org.springframework.http.HttpStatus;
@@ -19,9 +20,9 @@ public class GlobalExceptionHandler {
     public ResponseEntity<Map<String, Object>> getErrorResponse(HttpStatus status, String message) {
         Map<String, Object> errorResponse = new HashMap<>();
 
-        errorResponse.put("status", status.name());
+        errorResponse.put("timestamp", LocalDateTime.now());
         errorResponse.put("code", status.value());
-        errorResponse.put("message", message);
+        errorResponse.put("error", message);
 
         return new ResponseEntity<>(errorResponse, status);
     }
